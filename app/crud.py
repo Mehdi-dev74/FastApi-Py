@@ -1,4 +1,5 @@
 from sqlmodel import select
+
 from app.models import User, Item
 from app.database import get_session
 from sqlalchemy.ext.asyncio import AsyncAttrs
@@ -26,3 +27,4 @@ async def get_items() -> list[Item]:
     async for session in get_session():
         result = await session.exec(select(Item))
         return result.all()
+
