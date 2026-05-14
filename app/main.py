@@ -69,3 +69,4 @@ async def create_new_item(
 async def read_items(session: AsyncSession = Depends(get_session)):
     items = await get_items()
     return items
+
