@@ -14,3 +14,4 @@ class Item(SQLModel, table=True):
     description: Optional[str] = None
     price: float
     owner_id: int = Field(foreign_key="user.id")
+
