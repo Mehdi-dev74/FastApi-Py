@@ -2,10 +2,9 @@
 
 Modern REST API built with FastAPI, SQLModel, Docker and JWT authentication.
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
-![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-green)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/Docker-blue)](https://www.docker.com/)
 
 ---
 
