@@ -24,3 +24,4 @@ class ItemResponse(BaseModel):
     description: Optional[str] = None
     price: float
     owner_id: int
+
