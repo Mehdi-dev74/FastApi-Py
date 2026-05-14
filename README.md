@@ -1,4 +1,4 @@
-# FastAPI CRUD API 🚀
+# FastAPI Py
 
 Modern REST API built with FastAPI, SQLAlchemy, Docker and PostgreSQL.
 
@@ -44,7 +44,7 @@ Modern REST API built with FastAPI, SQLAlchemy, Docker and PostgreSQL.
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/Mehdi-dev74/FastApi-Py.git
 cd your-repo
 ```
 
@@ -104,17 +104,6 @@ http://127.0.0.1:8000/redoc
 ```bash
 docker-compose up --build
 ```
-
----
-
-# Technologies Used
-
-- Python
-- FastAPI
-- SQLAlchemy
-- Pydantic
-- Docker
-
 ---
 
 # Future Improvements
@@ -124,5 +113,4 @@ docker-compose up --build
 - Unit Testing
 - CI/CD Pipeline
 - Alembic Migrations
-
 ---
