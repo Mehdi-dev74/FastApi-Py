@@ -132,3 +132,5 @@ The service reads environment variables from `.env` when present. You can copy `
 - The app uses `sqlite+aiosqlite` by default for easy local development.
 - The database file is created automatically on startup.
 ---
+
+
