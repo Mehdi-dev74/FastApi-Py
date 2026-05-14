@@ -5,7 +5,7 @@ from datetime import datetime
 class UserCreate(BaseModel):
     username: str
     email: EmailStr
-    password: str  # In production, hash this!
+    password: str
 
 class UserResponse(BaseModel):
     id: int

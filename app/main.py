@@ -43,4 +43,4 @@ async def read_items(session: AsyncSession = Depends(get_session)):
 
 @app.get("/")
 async def root():
-    return {"message": "FastAPI is running! 🚀", "docs": "/docs"}
+    return {"message": "FastAPI is running! ", "docs": "/docs"}
