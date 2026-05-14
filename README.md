@@ -1,6 +1,6 @@
 # FastAPI Py
 
-Modern REST API built with FastAPI, SQLAlchemy, Docker and PostgreSQL.
+Modern REST API built with FastAPI, SQLModel, Docker and JWT authentication.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
@@ -12,12 +12,12 @@ Modern REST API built with FastAPI, SQLAlchemy, Docker and PostgreSQL.
 # Features
 
 ✅ REST API with FastAPI  
-✅ CRUD Operations  
-✅ SQLAlchemy ORM  
+✅ Async SQLModel / SQLite  
 ✅ Pydantic Validation  
-✅ Docker & Docker Compose  
-✅ Automatic Swagger Documentation  
-✅ Clean Project Structure  
+✅ JWT Authentication (login token)  
+✅ Password hashing with bcrypt  
+✅ Docker / Docker Compose  
+✅ Swagger UI auto-generated docs  
 
 ---
 
@@ -30,10 +30,13 @@ Modern REST API built with FastAPI, SQLAlchemy, Docker and PostgreSQL.
 ├── requirements.txt
 ├── README.md
 └── app/
-    ├── main.py
+    ├── core/
+    │   └── config.py
     ├── database.py
+    ├── main.py
     ├── models.py
     ├── schemas.py
+    ├── security.py
     └── crud.py
 ```
 
@@ -52,7 +55,7 @@ cd your-repo
 
 ```bash
 python -m venv venv
-source venv/bin/activate
+venv\Scripts\activate
 ```
 
 ## Install Dependencies
@@ -76,6 +79,15 @@ Application available at:
 ```txt
 http://127.0.0.1:8000
 ```
+
+---
+
+# Authentication
+
+- Create a user: `POST /users/`
+- Get a token: `POST /token`
+
+The app now hashes passwords and issues a bearer token for login.
 
 ---
 
@@ -104,14 +116,20 @@ http://127.0.0.1:8000/redoc
 ```bash
 docker-compose up --build
 ```
+
 ---
 
-# Future Improvements
+# Environment
 
-- JWT Authentication
-- PostgreSQL Integration
-- Unit Testing
-- CI/CD Pipeline
-- Alembic Migrations
+The service reads environment variables from `.env` when present. You can copy `.env.example` to `.env` and customize values.
+
+- `DATABASE_URL` - database connection string
+- `SECRET_KEY` - JWT secret
+
 ---
 
+# Notes
+
+- The app uses `sqlite+aiosqlite` by default for easy local development.
+- The database file is created automatically on startup.
+---
